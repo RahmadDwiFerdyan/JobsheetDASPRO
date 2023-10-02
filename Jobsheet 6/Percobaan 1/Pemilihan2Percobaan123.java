@@ -6,7 +6,7 @@ public class Pemilihan2Percobaan123 {
 
     int tahun;
 
-    System.out.print("Masukkan Tahun: ");
+    System.out.println("Masukkan Tahun: ");
     tahun = input23.nextInt();
 
     if ((tahun % 4) == 0) {
@@ -14,6 +14,5 @@ public class Pemilihan2Percobaan123 {
         System.out.println("Tahun Kabisat");
     } else
         System.out.println("Bukan Tahun Kabisat");
-
     }
 }
