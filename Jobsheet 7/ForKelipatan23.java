@@ -12,9 +12,13 @@ public class ForKelipatan23 {
 
     for (int i = 1; i <= 50; i++ ) {
         if (i % kelipatan == 0) {
-            jumlah += 1;
+            jumlah += i;
             counter++;
       }
     }
+
+    System.out.printf("Banyaknya bilangan %d dari 1 sampai 50 adalah %d\n", kelipatan, counter);
+    System.out.printf("Total bilangan kelipatan %d dari 1 sampai 50 adalah %d\n", kelipatan, jumlah);
+
   } 
 }
