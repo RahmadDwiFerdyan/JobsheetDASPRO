@@ -16,12 +16,12 @@ public class WhileKelipatan23 {
             jumlah += i;
             counter++;
         
-    } i++;
+        } i++;
     }
+
     rerata = jumlah / counter;
     System.out.printf("Banyaknya bilangan %d dari 1 sampai 50 adalah %d\n", kelipatan, counter);
     System.out.printf("Total bilangan kelipatan %d dari 1 sampai 50 adalah %f\n", kelipatan, jumlah);
     System.out.printf("Rata-rata dari bilangan-bilangan kelipatan %d adalah %f", kelipatan, rerata);
-
  }
 }
