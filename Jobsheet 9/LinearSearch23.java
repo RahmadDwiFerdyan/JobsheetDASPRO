@@ -18,13 +18,17 @@ public class LinearSearch23 {
         System.out.print("Masukkan key yang ingin dicari: ");
         key = sc.nextInt();
 
-        for (i=0; i < arrayInt.length; i++){
+        for (i=0; i<arrayInt.length; i++){
             if (arrayInt[i] == key){
                 hasil = i;
-                System.out.println("Key ada di posisi indeks ke-" +hasil);
+                System.out.println("Key ada di posisi indeks ke-" +hasil); 
+                break;
             }
         }
-        
-        System.out.println("Key tidak ditemukan");
-    }
-}
+
+        if (hasil==-1){
+            System.out.println("Key tidak ditemukan");
+        }
+    } 
+} 
+
