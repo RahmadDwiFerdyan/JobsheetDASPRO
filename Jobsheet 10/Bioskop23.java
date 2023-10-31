@@ -21,5 +21,12 @@ public class Bioskop23 {
     for (String[] barisPenonton : penonton){
         System.out.println("Panjang baris: " + barisPenonton.length);
     }
+
+    System.out.println("Penonton pada baris ke-3: ");
+    for (String i : penonton [2]){
+        System.out.println(i);
+    }
+
+
     }
 }
