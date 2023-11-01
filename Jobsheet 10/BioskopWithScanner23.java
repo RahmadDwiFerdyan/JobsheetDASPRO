@@ -13,7 +13,7 @@ do{
     System.out.println("(1)Input data penonton" );
     System.out.println("(2)Tampilkan daftar penonton" );
     System.out.println("(3)Exit" );
-    System.out.print(">> Masukkan nomor pilihan menu: ");
+    System.out.print("\t>> Masukkan nomor pilihan menu: ");
     menu=sc.nextInt();
     sc.nextLine();
     System.out.println("");
@@ -31,7 +31,7 @@ do{
             
             if (baris>4 || kolom>2){
                 System.out.println("\t*WARNING: Kursi tidak tersedia");
-            }else if(penonton[baris-1][kolom-1] != null && penonton[baris-1][kolom-1] != "***"){
+            }else if(penonton[baris-1][kolom-1] != null && penonton[baris-1][kolom-1] != "(empty)"){
                 System.out.println("\t*WARNING: Kursi sudah ditempati");
             }else {
             penonton[baris-1][kolom-1] = nama;
@@ -48,9 +48,9 @@ do{
         case 2:
             for (int i = 0; i < penonton.length; i++) {
                 if (penonton[i][0] == null){
-                penonton[i][0] = "***";
+                penonton[i][0] = "(empty)";
                 }if (penonton[i][1] == null){
-                penonton[i][1] = "***";
+                penonton[i][1] = "(empty)";
                 }
 
             System.out.println("Penonton baris ke-"+(i+1)+" : "+ String.join("\t|\t", penonton[i]));
