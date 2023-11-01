@@ -9,7 +9,7 @@ public class BioskopWithScanner23 {
     String[][] penonton = new String[4][2];
 
 do{
-    System.out.println("## DAFTAR MENU ##");
+    System.out.println("\n## DAFTAR MENU ##");
     System.out.println("(1)Input data penonton" );
     System.out.println("(2)Tampilkan daftar penonton" );
     System.out.println("(3)Exit" );
@@ -30,14 +30,14 @@ do{
             sc.nextLine();
             
             if (baris>4 || kolom>2){
-                System.out.println("*WARNING: Kursi tidak tersedia");
-            } else if(penonton[baris-1][kolom-1] != null){
-                System.out.println("*WARNING: Kursi sudah ditempati");
+                System.out.println("\t*WARNING: Kursi tidak tersedia");
+            }else if(penonton[baris-1][kolom-1] != null && penonton[baris-1][kolom-1] != "***"){
+                System.out.println("\t*WARNING: Kursi sudah ditempati");
             }else {
             penonton[baris-1][kolom-1] = nama;
             }
             
-            System.out.print(">Input penonton lainnya? (y/n): ");
+            System.out.print("\t>Input penonton lainnya? (y/n): ");
             next = sc.nextLine();
 
             if (next.equalsIgnoreCase("n")){
@@ -47,17 +47,19 @@ do{
             
         case 2:
             for (int i = 0; i < penonton.length; i++) {
-                for(int j = 0; j < penonton[i].length; j++)
-                if (penonton[i][j] == null){
-                penonton[i][j] = "***";
-            }
-            System.out.println("Penonton baris ke-"+(i+1)+" : "+ String.join(",", penonton[i]));
+                if (penonton[i][0] == null){
+                penonton[i][0] = "***";
+                }if (penonton[i][1] == null){
+                penonton[i][1] = "***";
+                }
+
+            System.out.println("Penonton baris ke-"+(i+1)+" : "+ String.join("\t|\t", penonton[i]));
             } break;
 
         case 3: break;
     }
     
-    System.out.print("\n>> Pilih menu lain (y/n): ");
+    System.out.print("\n\t>> Pilih menu lain (y/n): ");
     repeat = sc.next().charAt(0);
 
 }
